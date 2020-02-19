@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row my-3">
+                <h1>New Car</h1>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <form class="form-group" action="/proc_car" method="POST">
+                        {% csrf_token %}
+
+                        <div class="col">
+                            <label>Year</label>
+                            <input
+                                class="form-control"
+                                name="year"
+                                type="number"
+                            />
+                        </div>
+                        <div class="col">
+                            <label>Make</label>
+                            <input
+                                class="form-control"
+                                name="make"
+                                type="text"
+                            />
+                        </div>
+
+                        <div class="col">
+                            <label>Model</label>
+                            <input
+                                class="form-control"
+                                name="model"
+                                type="text"
+                            />
+                        </div>
+                        <div class="col">
+                            <label>Img Url</label>
+                            <input
+                                class="form-control"
+                                name="imgUrl"
+                                type="url"
+                            />
+                        </div>
+                        <div class="col">
+                            <button
+                                class="btn btn-primary mt-3 justify-self-end"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
